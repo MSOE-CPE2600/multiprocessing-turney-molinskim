@@ -33,3 +33,10 @@ Processes had a more significant impact on reducing runtime compared to threads.
 This is evident from the data, where moving from 1 process to 2,5, or more processes showed dramatic improvements in runtime.
 Processes run independently with separate memory spaces, allowing for true parallel execution and use multiple CPU cores with no interference.
 Threads provided improvements, but the gains diminished as the number increased.
+
+## Sweet Spot
+The most significant drops happen between 1 and 2 processes.
+Using 20 threads shows the smallest runtimes across all configurations, with
+1.33 minutes being the fastest overall. After 5 processes, the improvements are smaller.
+5 threads and 5 processes seem to provide a good balance with a runtime of 1.433 minutes.
+It achieves near-optimal performance without excessive overhead.
